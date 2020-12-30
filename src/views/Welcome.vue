@@ -1,12 +1,12 @@
 <template>
   <div class="welcome container">
     <div v-if="showLogin">
-      <h3>Login</h3>
+      <h2>Login</h2>
       <LoginForm />
       <p>No account? <span @click="showLogin = false">Signup</span> instead</p>
     </div>
     <div v-else>
-      <h3>Sign up</h3>
+      <h2>Sign up</h2>
       <SignupForm />
       <p>Have account? <span @click="showLogin = true">Login</span> instead</p>
     </div>
