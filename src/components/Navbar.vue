@@ -12,18 +12,15 @@
 <script>
 import useLogout from '../composables/useLogout';
 import getUser from '../composables/getUser';
-import { useRouter } from 'vue-router';
 
 export default {
   name: 'Navbar',
   setup() {
     const { error, logout } = useLogout();
     const { user } = getUser();
-    const router = useRouter();
 
     const handleLogout = async () => {
       await logout();
-      router.push('/');
     };
     return { error, handleLogout, user };
   },
